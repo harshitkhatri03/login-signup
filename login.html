@@ -1,0 +1,149 @@
+<html>
+<head>
+  <style>
+   body
+   {
+     margin:0;
+     padding:0;
+     background:url("dog2.jpeg");
+     background-size: cover;
+     background-position:center;
+   }
+    .box
+    {
+    background-color:white;
+    overflow:hidden;
+    }
+    #logo
+    {
+      float:left;
+    }
+
+    .loginbox{
+          background-position: center;
+        border: 1px solid;
+        width:320px;
+        height: 420px;
+        background:rgba(0,0,0,0.5);
+        color:#fff;
+        top: 50%;
+        left:50%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        box-sizing: border-box;
+        padding: 70px 30px;
+    }
+
+    h1{
+        margin: 0;
+        padding: 0 0 20px;
+        text_align: center;
+        font_size: 22px;
+        color: #fff;
+    }
+    .loginbox p{
+        margin:0;
+        padding:0;
+        font-weight: bold;
+    }
+    .loginbox input
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .loginbox input[type="text"],input[type="password"]
+    {
+        border:none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+    }
+    .loginbox input[type="submit"]
+    {
+        border:none;
+        outline:none;
+        height:40px;
+        background: #fb2525;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 20px;
+    }
+    .loginbox input[type="submit"]:hover
+    {
+        cursor: pointer;
+        background: #ffc107;
+        color: #000;
+    }
+    .loginbox a{
+        text_decoration: none;
+        font-size: 12px;
+        line-height: 20px;
+        color:darkgray;
+    }
+    .loginbox a:hover
+    {
+    color: #ffc107;
+    }
+        .loginbox input[type="submit"]:hover
+        {
+          cursor:pointer;
+            background: #39dc79;
+            color:#000;
+        }
+
+    @media only screen and(max-width:500px)
+    {
+        body{
+            background-color: #39dc79;
+        }
+        .abc{
+            background-color: #ffc107;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+ <div class="box">
+    <img id="logo" src="dog.PNG" height="100px" width="180px">
+   </div>
+   <div class ="loginbox">
+
+             <center><h1>Login Here</h1></center>
+             <form action="/action_page.php" name="f1" onsubmit="return myfunction()">
+                 <p>Username</p>
+                 <input type="text" name="f2" placeholder="Enter Username" >
+                 <p>Password</p>
+                 <input type="password" name="f3" placeholder="Enter Password" >
+
+                     <input type="submit" value="Login">
+
+                 <a href="">Forgot Password</a><br>
+                 <a href ="signup.html">Create a new account</a><br>
+             </form>
+         </div>
+  </body>
+ <script>
+    function myfunction(){
+var x=f1.f2.value;
+var y=f1.f3.value;
+if(x==" "||x<'a'||x>'z')
+{
+ alert("name must be filled");
+return false;
+}
+if(y==""||y.length<4||y.length>12)
+{
+  alert("password must be filled");
+ return false;
+}
+else{
+  return true;
+}
+}
+    </script>
+  </html>

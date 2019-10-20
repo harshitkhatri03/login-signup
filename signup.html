@@ -1,0 +1,185 @@
+<html>
+<head>
+  <style>
+   body
+   {
+     margin:0;
+     padding:0;
+     background:url("dog2.jpeg");
+     background-size: cover;
+     background-position:center;
+   }
+    .box
+    {
+    background-color:white;
+    overflow:hidden;
+    }
+    #logo
+    {
+      float:left;
+
+    }
+
+    .loginbox{
+          background-position: center;
+        border: 1px solid;
+        width:320px;
+        height: 620px;
+        background:rgba(0,0,0,0.5);
+        color:#fff;
+        top: 63%;
+        left:50%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        box-sizing: border-box;
+        padding: 70px 30px;
+    }
+
+    h1{
+        margin: 0;
+        padding: 0 0 20px;
+        text_align: center;
+        font_size: 22px;
+        color: #fff;
+    }
+    .loginbox p{
+        margin:0;
+        padding:0;
+        font-weight: bold;
+    }
+    .loginbox input
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .loginbox input[type="text"],input[type="password"]
+    {
+        border:none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+    }
+    .loginbox input[type="email"],input[type="number"]
+    {
+        border:none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+    }
+    .loginbox input[type="submit"]
+    {
+        border:none;
+        outline:none;
+        height:40px;
+        background: #fb2525;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 20px;
+    }
+    .loginbox input[type="submit"]:hover
+    {
+        cursor: pointer;
+        background: #ffc107;
+        color: #000;
+    }
+    .loginbox a{
+        text_decoration: none;
+        font-size: 12px;
+        line-height: 20px;
+        color:darkgray;
+    }
+    .loginbox a:hover
+    {
+    color: #ffc107;
+    }
+        .loginbox input[type="submit"]:hover
+        {
+          cursor:pointer;
+            background: #39dc79;
+            color:#000;
+        }
+        @media only screen and(max-width: 700px)
+        {
+
+          body
+          {
+            background-image: linear-gradient(hotpink, white, blue);
+
+          }
+
+        }
+
+    </style>
+
+  <script>
+    function myfunction(){
+var x=f1.f2.value;
+var y=f1.f3.value;
+var z=f1.f4.value;
+var a=f1.f5.value;
+var b=f1.f5.value;
+if(x==" "||x<'a'||x>'z')
+{
+ alert("name must be filled");
+return false;
+}
+else if(y==" "||y<'a'||y>'z')
+{
+ alert("email must be filled");
+return false;
+}
+else if(z==""||z.length<4||z.length>12)
+{
+  alert("password must be filled");
+  return false;
+}
+else if(a==""||a!=z)
+{
+  alert("password is not correct");
+  return false;
+}
+else if(b==""||b.length<10||b.length>10)
+{
+ alert("check your number");
+ return false;
+}
+else{
+  return true;
+}
+}
+    </script>
+</head>
+
+<body>
+ <div class="box">
+    <img id="logo" src="dog.PNG" height="100px" width="180px">
+   </div>
+   <div class ="loginbox">
+
+             <center><h1>SignUp</h1></center>
+             <form action="/action_page.php" name="f1" onsubmit="return myfunction()">
+                 <p>Username</p>
+                 <input type="text" name="f2" placeholder="Enter Username" >
+                 <p>Email</p>
+                 <input type="email" name="f3" placeholder="Enter Email" >
+                 <p>Password</p>
+                 <input type="password" name="f4" placeholder="Enter Password" >
+                 <p>Retype Password</p>
+                 <input type="password" name="f5" placeholder="Retype Password" >
+                 <p>Contact</p>
+                 <input type="number" name="f6" placeholder="Enter your Number" >
+
+                     <input type="submit" value="SignUp"  >
+
+                 <a href="">Forgot Password</a><br>
+                 <a href ="login.html">Already have a account</a><br>
+             </form>
+         </div>
+  </body>
+  </html>
